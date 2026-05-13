@@ -1,0 +1,104 @@
+  /* ========== WORDS SCREEN ========== */
+  .search-bar {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    transition: border-color 0.12s ease;
+  }
+  .search-bar:focus-within { border-color: var(--text-muted); }
+  .search-bar span { color: var(--text-muted); font-size: 14px; }
+  .search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 0;
+    font-size: 14px;
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+  }
+  .word-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: border-color 0.12s ease;
+  }
+  .word-item:hover { border-color: var(--border-strong); }
+  .word-item-icon { display: none; } /* 隱藏童趣 emoji 圖示 */
+  .word-info { flex: 1; min-width: 0; }
+  .word-en {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+    letter-spacing: -0.01em;
+  }
+  .word-zh {
+    font-size: 13px;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+  }
+  .word-sentence {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 6px;
+  }
+  .word-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .word-streak {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--bg);
+    color: var(--text-muted);
+  }
+  .word-streak.streak-new { color: var(--text-muted); }
+  .word-streak.streak-good { color: var(--success); background: var(--success-soft); }
+  .word-streak.streak-great { color: var(--accent); background: var(--accent-soft); }
+  .speak-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.12s ease;
+    padding: 0;
+  }
+  .speak-btn:hover { background: var(--bg); border-color: var(--border-strong); }
+  .delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.12s ease;
+  }
+  .delete-btn:hover { opacity: 1; color: var(--danger); background: var(--danger-soft); }
+
