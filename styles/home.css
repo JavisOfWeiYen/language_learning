@@ -1,0 +1,106 @@
+  /* ========== HOME ========== */
+  .hero-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .hero-greeting {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+  }
+  .hero-level {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .xp-bar-wrap {
+    background: var(--bg);
+    border-radius: 999px;
+    height: 4px;
+    overflow: hidden;
+  }
+  .xp-bar-fill {
+    background: var(--text-soft);
+    height: 100%;
+    transition: width 0.4s ease;
+  }
+  .xp-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 18px; margin-bottom: 6px; opacity: 0.5; }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin: 0 0 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .action-btn {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.12s ease;
+    text-align: left;
+  }
+  .action-btn:hover {
+    border-color: var(--border-strong);
+    background: #FCFCFB;
+  }
+  .action-btn .icon { font-size: 16px; opacity: 0.6; }
+  /* 移除四種顏色變化，全部統一 */
+  .action-btn.quiz, .action-btn.add, .action-btn.review, .action-btn.wrong {
+    background: var(--card);
+    color: var(--text);
+    box-shadow: none;
+  }
+

@@ -1,0 +1,152 @@
+  /* ========== ADD SCREEN ========== */
+  .add-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .add-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+  .input-group { margin-bottom: 14px; }
+  .input-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+  }
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.12s ease;
+  }
+  .input-group input:focus,
+  .input-group textarea:focus {
+    border-color: var(--text-muted);
+  }
+  .input-group textarea {
+    resize: vertical;
+    min-height: 70px;
+    line-height: 1.5;
+  }
+  .submit-btn {
+    width: 100%;
+    background: var(--text);
+    color: var(--card);
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.12s ease;
+  }
+  .submit-btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+
+
+  /* ========== BULK IMPORT PREVIEW ========== */
+  .bulk-summary {
+    display: flex;
+    gap: 16px;
+    padding: 10px 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .bulk-summary-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .bulk-summary-num {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .bulk-summary-num.ok { color: var(--success); }
+  .bulk-summary-num.warn { color: var(--warning); }
+  .bulk-summary-num.err { color: var(--danger); }
+  .bulk-summary-label { color: var(--text-muted); }
+
+  .bulk-rows {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    max-height: 240px;
+    overflow-y: auto;
+    background: var(--card);
+  }
+  .bulk-row {
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .bulk-row:last-child { border-bottom: none; }
+  .bulk-row-num {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    text-align: right;
+  }
+  .bulk-row-content {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .bulk-row-en {
+    font-weight: 600;
+    color: var(--text);
+  }
+  .bulk-row-zh {
+    color: var(--text-soft);
+    margin-left: 8px;
+  }
+  .bulk-row-pos {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-left: 6px;
+  }
+  .bulk-row-status {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 7px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .bulk-row-status.ok { color: var(--success); background: var(--success-soft); }
+  .bulk-row-status.dup { color: var(--warning); background: var(--warning-soft); }
+  .bulk-row-status.err { color: var(--danger); background: var(--danger-soft); }
+  .bulk-row.invalid { background: var(--danger-soft); }
+  .bulk-row.duplicate { background: var(--warning-soft); }
+  .bulk-row-error-msg {
+    grid-column: 2 / -1;
+    font-size: 11px;
+    color: var(--danger);
+    margin-top: 2px;
+  }
+
+  .empty-state { text-align: center; padding: 64px 20px; color: var(--text-muted); }
+  .empty-state .emoji { font-size: 24px; margin-bottom: 8px; opacity: 0.5; }
